@@ -1,0 +1,24 @@
+	<div id="pop">
+		<div id="header-vote">
+        	QUEL NOM LUI DONNER ?
+        </div>
+        
+        <div id="sousheader-vote">
+        	Choisissez parmi ces proposititions
+        </div>
+        
+        <div id="img-arbre">
+        </div>
+        
+        {% for name in tree.name_set.all %}
+        <div class="votechoix">
+        	<a href="javascript:load_content_results(lastInfowindow, {{ tree.id }}, {{ name.id }});" class="votechoix-style">{{ name.name }}</a>
+        </div>
+        
+        <div class="stats">
+        	({{ name.vote }} votes)
+        </div>
+ 
+        {% endfor %}
+   
+    </div>

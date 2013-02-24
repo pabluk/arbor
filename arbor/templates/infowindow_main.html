@@ -1,0 +1,34 @@
+    <div id="pop">
+        <div id="header-nom">
+            <div id="nom-arbre">
+                {{ tree.current_name }}
+            </div>
+        </div>
+
+        <div id="img-arbre">
+        </div>
+
+        <div id="id-arbre">
+           {{ tree.common_name }}
+        </div>
+
+        <div id="sousid-arbre">
+            ({{ tree.binomial_name }})
+        </div>
+
+        <div id="adresse-arbre">
+            <div id="marq">
+            </div>
+
+            <div id="adresse">
+                {{ tree.address }}
+            </div>
+        </div>
+
+        <div class="clear">
+        </div>
+
+        <div id="btn-vote">
+            <a href="javascript:load_content_vote(lastInfowindow, {{ tree.id }});"></a>
+        </div>
+    </div>

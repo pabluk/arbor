@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+img{
+	border:none;	
+}
+
+body{
+	margin:0;	
+	height:100%;
+}
+
+@font-face {
+font-family: 'Vitesse-Bold';
+src: url('../fonts/Vitesse-Bold.otf');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'VitesseSans';
+src: url('../fonts/VitesseSans-Medium.otf');
+font-weight: normal;
+font-style: normal;
+}
+
+#map{
+	background-color:#ccc;
+	width:100%;
+	height:950px;
+}
+
+#pop{
+	width:300px;
+	height:550px;
+}
+
+#header-nom{
+	width:300px;
+	height:113px;
+	background-image:url(../img/header.jpg);
+}	
+
+#nom-arbre{
+	padding-top:40px;
+	margin-left:auto;
+	margin-right:auto;
+	width:200px;
+	font-size:26px;
+	color:#fff;	
+	font-family:'Vitesse-Bold';
+	text-align:center;
+}
+
+#img-arbre{
+	width:300px;
+	height:212px;
+	background-image:url(../img/bg_arbre.jpg);
+	margin-top:20px;	
+}
+
+#id-arbre{
+	margin-top:20px;
+	font-size:20px;
+	color:#539B50;	
+	font-family:'Vitesse-Bold';
+	width:300px;
+
+}
+
+#sousid-arbre{
+	margin-top:5px;
+	font-size:16px;
+	color:#539B50;	
+	font-family:'VitesseSans';
+	width:300px;
+
+}
+
+#marq{
+	float:left;	
+	background-image:url(../img/marq.jpg);
+	width:25px;
+	height:27px;
+}
+
+#adresse{
+	font-size:16px;
+	color:#969696;	
+	font-family:'VitesseSans';
+	width:260px;
+	float:right;
+}
+
+#adresse-arbre{
+	margin-top:20px;	
+}
+
+#btn-vote{
+	width:300px;
+	margin-top:20px;	
+}
+
+#btn-vote a{
+	width:300px;
+	height:42px;
+	background-image:url(../img/btn-vote.jpg);
+	float:left;
+}
+
+#btn-vote a:hover{
+	width:300px;
+	height:42px;
+	background-position:-300px;
+	background-image:url(../img/btn-vote.jpg);
+	float:right;
+}
+
+#header-vote{
+	font-size:20px;
+	color:#539B50;	
+	font-family:'Vitesse-Bold';
+	width:300px;
+}
+
+#sousheader-vote{
+	margin-top:5px;
+	font-size:16px;
+	color:#539B50;	
+	font-family:'VitesseSans';
+	width:300px;
+}
+
+.votechoix{
+	margin-top:20px;
+	width:300px;
+	padding-top:10px;
+	height:42px;
+	background-image:url(../img/bg-vote.jpg);
+	font-size:20px;
+	color:#fff;	
+	font-family:'Vitesse-Bold';
+	text-align:center;
+	height:32px;
+}
+
+.stats{
+	margin-top:5px;
+	font-size:16px;
+	color:#969696;	
+	font-family:'VitesseSans';
+	width:300px;
+	text-align:center;
+}
+
+.votechoix-style{
+	text-decoration:none;
+	color:#fff;	
+
+}
+
+#merci{
+	background-image:url(../img/merci.jpg);
+	width:300px;
+	height:320px;
+	margin-top:40px;	
+	margin-bottom:20px;
+}
+
+.clear{
+	clear:both;	
+}
+
+#close{
+	width:300px;
+	margin-top:20px;	
+}
+
+#close a{
+	width:300px;
+	height:42px;
+	background-image:url(../img/btn-close.jpg);
+	float:left;
+}
+
+#close a:hover{
+	width:300px;
+	height:42px;
+	background-position:-300px;
+	background-image:url(../img/btn-close.jpg);
+	float:right;
+}
+
+#confirm-vote{
+	font-size:20px;
+	color:#539B50;	
+	font-family:'Vitesse-Bold';
+	text-align:center;
+	width:300px;
+}
+
+#footer-top{
+	width:100%;
+	height:2px;
+	background-color:#7f7f7f;	
+}
+
+#footer{
+	width:100%;
+	margin-right:auto;
+	margin-left:auto;
+	height:62px;
+	z-index:10;
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	background-color:white;
+	background-image:url(../img/logo.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+
+#aide{
+	float:right;
+	width:180px;
+	height:40px;
+	margin-top:10px;
+}
+
+#logo{
+	float:left;
+	margin-left:auto;
+	margin-right:auto;
+	width:228px;
+	height:60px;
+}
+
+#aide a{
+	background-image:url(../img/aide.png);	
+	width:180px;
+	height:40px;
+	float:left;	
+}
+
+#aide a:hover{
+	background-image:url(../img/aide.png);	
+	background-position:-180px;
+	width:180px;
+	height:40px;
+	float:left;	
+}
+
+
+#about{
+	float:left;
+	width:180px;
+	height:40px;
+	margin-top:10px;
+}
+
+#about a{
+	background-image:url(../img/about.png);	
+	width:180px;
+	height:40px;
+	float:left;	
+}
+
+#about a:hover{
+	background-image:url(../img/about.png);	
+	background-position:-180px;
+	width:180px;
+	height:40px;
+	float:left;	
+}
+
+
+#apropos{
+	color:#969696;	
+	font-family:'VitesseSans';
+	width:500px;
+	line-height:22px;
+}
+
+#apropos a{
+	color:#539B50;	
+	text-decoration:none;
+}
+
+#apropos a:hover{
+	color:#539B50;	
+	text-decoration:underline;
+}
+
+#logoheader{
+	margin-bottom:20px;	
+}
