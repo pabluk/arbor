@@ -32,6 +32,10 @@ def deploy(version):
     with cd(remote_dir):
         run('cp commons/local_settings.py arbor-current/arbor/')
 
+    # Link media files
+    with cd(remote_dir):
+        run('ln -s ../../commons/media arbor-current/public/media')
+
     # Run collectstatic
     run('%s python %s/%s/manage.py collectstatic --noinput' % (env_vars, remote_dir, prj_name))
 
