@@ -6,7 +6,7 @@ class TreeAdmin(admin.ModelAdmin):
 
 
 class NameAdmin(admin.ModelAdmin):
-    list_display = ('name', 'vote', 'tree')
+    list_display = ('name', 'gender', 'vote', 'tree')
 
 admin.site.register(Tree, TreeAdmin)
 admin.site.register(Name, NameAdmin)
