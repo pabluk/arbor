@@ -6,7 +6,8 @@ sys.path.insert(0, _PROJECT_DIR)
 sys.path.insert(0, os.path.dirname(_PROJECT_DIR))
 
 
-_PROJECT_NAME = _PROJECT_DIR.split('/')[-1]
+#_PROJECT_NAME = _PROJECT_DIR.split('/')[-1]
+_PROJECT_NAME = 'arbor'
 
 os.environ['DJANGO_SETTINGS_MODULE'] = "%s.settings" % _PROJECT_NAME
 
