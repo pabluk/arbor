@@ -40,6 +40,9 @@
         });
 
         google.maps.event.addListener(marker{{ forloop.counter }}, 'click', function() {
+            if (lastInfowindow) {
+                lastInfowindow.close();
+            }
             infowindow{{ forloop.counter }}.close();
             load_content(marker{{ forloop.counter }}, infowindow{{ forloop.counter }}, {{ tree.id }});
             lastMarker = marker{{ forloop.counter }};
