@@ -4,15 +4,26 @@ from django.shortcuts import render_to_response, get_object_or_404
 from trees.models import Tree, Name
 
 def home(request):
+    show_splash = request.session.get('show_splash', True)
+    if show_splash:
+        request.session['show_splash'] = False
+
     trees = Tree.objects.all()
-    return render_to_response('index.html', {'trees': trees})
+    return render_to_response('index.html', {'trees': trees, 'show_splash': show_splash})
 
 def about(request):
-    return render_to_response('apropos.html')
+    return render_to_response('about.html')
+
+def help(request):
+    return render_to_response('help.html')
 
 def tree(request, id):
+    allow_vote = request.session.get('allow_vote_%s' % id, True)
+    if allow_vote:
+        request.session['allow_vote_%s' % id] = False
+
     tree = get_object_or_404(Tree, pk=id) 
-    return render_to_response('infowindow_main.html', {'tree': tree})
+    return render_to_response('infowindow_main.html', {'tree': tree, 'allow_vote': allow_vote})
 
 
 def vote(request, id):

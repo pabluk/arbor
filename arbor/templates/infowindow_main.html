@@ -28,7 +28,9 @@
         <div class="clear">
         </div>
 
+        {% if allow_vote %}
         <div id="btn-vote">
             <a href="javascript:load_content_vote(lastInfowindow, {{ tree.id }});"></a>
         </div>
+        {% endif %}
     </div>

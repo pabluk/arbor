@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     url(r'^tree/(?P<tree_id>\d+)/vote/(?P<name_id>\d+)/$', 'arbor.views.results', name='results'),
 
     url(r'^apropos/$', 'arbor.views.about', name='about'),
+    url(r'^aide/$', 'arbor.views.help', name='help'),
 )
 
 if settings.DEBUG:

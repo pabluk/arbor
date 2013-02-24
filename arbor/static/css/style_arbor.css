@@ -25,6 +25,13 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face {
+font-family: 'VitesseSansBook';
+src: url('../fonts/VitesseSans-Book.otf');
+font-weight: normal;
+font-style: normal;
+}
+
 #map{
 	background-color:#ccc;
 	width:100%;
@@ -276,9 +283,9 @@ font-style: normal;
 
 
 #apropos{
-	color:#969696;	
-	font-family:'VitesseSans';
-	width:500px;
+	color:#666666;	
+	font-family:'VitesseSansBook';
+	width:600px;
 	line-height:22px;
 }
 
@@ -293,5 +300,13 @@ font-style: normal;
 }
 
 #logoheader{
+	width:228px;
 	margin-bottom:20px;	
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#splash{
+	width:600px;	
+	height:600px;
 }

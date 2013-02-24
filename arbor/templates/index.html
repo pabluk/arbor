@@ -9,6 +9,7 @@
       body { height: 100%; margin: 0; padding: 0 }
       #map_canvas { height: 100% }
     </style>
+    <link rel="icon" type="image/png" href="/static/img/icon.png">
     <link href="/static/css/style_arbor.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/colorbox.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -78,6 +79,11 @@
             },
         });
      }
+    {% if show_splash %}
+        $(document).ready(function() {
+            $.colorbox({html:'<img src="/static/img/splash.png">', innerWidth:400, innerHeight:410,});
+        });
+    {% endif %}
     </script>
   </head>
   <body onload="initialize()">
@@ -87,13 +93,13 @@
         </div>
         <div id="about">
             <a class="popup" href="/apropos/"></a>
-            <script>
-            $('a.popup').colorbox();
-            </script>
         </div>
         <div id="aide">
-            <a href="#"></a>
+            <a class="popup" href="/aide/"></a>
         </div>
     </div>
+    <script>
+        $('a.popup').colorbox({ opacity:0.45, innerWidth:"620px", });
+    </script>
   </body>
 </html>
