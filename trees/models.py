@@ -1,5 +1,13 @@
 from django.db import models
 
+GENDER_MALE = 'm'
+GENDER_FEMALE = 'f'
+
+GENDER_CHOICES = (
+    (GENDER_FEMALE, u'Fille'),
+    (GENDER_MALE, u'Gar\xe7on'),
+)
+
 
 class Tree(models.Model):
     common_name = models.CharField(max_length=200)
@@ -17,8 +25,9 @@ class Tree(models.Model):
 
 class Name(models.Model):
     name = models.CharField(max_length=200)
-    vote = models.PositiveIntegerField()
-    tree = models.ForeignKey('Tree')
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    vote = models.PositiveIntegerField(default=0)
+    tree = models.ForeignKey('Tree', blank=True, null=True)
 
     def __unicode__(self):
         return self.name
