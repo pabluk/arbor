@@ -21,7 +21,28 @@ class Tree(models.Model):
         return self.common_name
 
     def current_name(self):
+        """Return the name selected for votes."""
         return self.name_set.order_by('-vote')[0]
+
+    def assign_names(self):
+        """Assign 3 random avaliable names."""
+        if self.name_set.count() == 0:
+            name = Name.objects.filter(tree__isnull=True, gender=GENDER_FEMALE).order_by('?')[0]
+            name.tree = self
+            name.save()
+
+            name = Name.objects.filter(tree__isnull=True, gender=GENDER_MALE).order_by('?')[0]
+            name.tree = self
+            name.save()
+
+            name = Name.objects.filter(tree__isnull=True).order_by('?')[0]
+            name.tree = self
+            name.save()
+
+    def votes(self):
+        """Return names and votes."""
+        vote_list = ["%s (%s)" % (n.name, n.vote) for n in self.name_set.all()]
+        return " / ".join(vote_list)
 
 class Name(models.Model):
     name = models.CharField(max_length=200)
