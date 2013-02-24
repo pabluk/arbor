@@ -49,6 +49,13 @@
             lastMarker = marker{{ forloop.counter }};
             lastInfowindow = infowindow{{ forloop.counter }};
         });
+        if (window.location.hash) {
+            var id = window.location.hash.substring(1);
+            if (id == {{ tree.id }}) {
+                google.maps.event.trigger(marker{{ forloop.counter }}, 'click');
+            }
+
+        }
         {% endfor %}
       }
 
