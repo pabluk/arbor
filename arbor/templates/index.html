@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="/static/img/icon.png">
     <link href="/static/css/style_arbor.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/colorbox.css" rel="stylesheet" type="text/css" />
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="/static/js/jquery-1.9.1.min.js"></script>
     <script src="/static/js/jquery.colorbox-min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpYmtR2LnFyUy5WXmvGCSvQ9YpjZHzDVg&sensor=false"></script>
     <script type="text/javascript">
@@ -92,10 +92,10 @@
         <div id="footer-top">
         </div>
         <div id="about">
-            <a class="popup" href="/apropos/"></a>
+            <a class="popup" href="{% url about %}"></a>
         </div>
         <div id="aide">
-            <a class="popup" href="/aide/"></a>
+            <a class="popup" href="{% url help %}"></a>
         </div>
     </div>
     <script>
