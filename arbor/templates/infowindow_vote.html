@@ -7,7 +7,7 @@
         	Choisissez parmi ces proposititions
         </div>
         
-        <div id="img-arbre">
+        <div id="img-arbre" {% if tree.photo %}style="background-image:url('{{ tree.photo.url }}');"{% endif %}>
         </div>
         
         {% for name in tree.name_set.all %}
