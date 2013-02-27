@@ -2,7 +2,7 @@ from django.contrib import admin
 from trees.models import Tree, Name
 
 class TreeAdmin(admin.ModelAdmin):
-    list_display = ('common_name', 'binomial_name', 'address', 'latitude', 'longitude', 'votes')
+    list_display = ('common_name', 'binomial_name', 'address', 'latitude', 'longitude', 'votes', 'verified')
 
     def save_model(self, request, obj, form, change):
         obj.save()

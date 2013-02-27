@@ -16,6 +16,7 @@ class Tree(models.Model):
     photo = models.FileField(upload_to='photos', blank=True)
     latitude = models.FloatField()
     longitude = models.FloatField()
+    verified = models.BooleanField(default=False, blank=True)
 
     def __unicode__(self):
         return self.common_name
