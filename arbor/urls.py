@@ -19,6 +19,7 @@ urlpatterns = patterns('',
     url(r'^tree/(?P<id>\d+)/$', 'arbor.views.tree', name='tree'),
     url(r'^tree/(?P<id>\d+)/vote/$', 'arbor.views.vote', name='vote'),
     url(r'^tree/(?P<tree_id>\d+)/vote/(?P<name_id>\d+)/$', 'arbor.views.results', name='results'),
+    url(r'^export/$', 'arbor.views.export', name='export'),
 
     url(r'^apropos/$', 'arbor.views.about', name='about'),
     url(r'^aide/$', 'arbor.views.help', name='help'),

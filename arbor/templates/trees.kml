@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>Arbor : Donnons un nom aux arbres Nantais !</name>
+        <atom:author>
+            <atom:name>Bastien KERSPERN</atom:name>
+            <atom:name>Pablo SEMINARIO</atom:name>
+        </atom:author>
+        {% for tree in trees %}<Placemark>
+            <name>{{ tree.common_name }}</name>
+            <description>Nom binominal : {{ tree.binomial_name }} - Adress : {{ tree.address }}</description>
+            <Point>
+                <coordinates>{{ tree.longitude }},{{ tree.latitude }}</coordinates>
+            </Point>
+        </Placemark>{% endfor %}
+    </Document>
+</kml>

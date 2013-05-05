@@ -1,5 +1,7 @@
 from django.db.models import F
+from django.contrib.gis.shortcuts import render_to_kml
 from django.shortcuts import render_to_response, get_object_or_404
+
 
 from trees.models import Tree, Name
 
@@ -36,3 +38,10 @@ def results(request, tree_id, name_id):
     tree.name_set.get(id=name_id)
     Name.objects.filter(pk=name_id).update(vote=F('vote') + 1)
     return render_to_response('infowindow_results.html', {'tree': tree, 'name': name})
+
+
+def export(request):
+    trees = Tree.objects.all().values('common_name', 'binomial_name', 'address', 'latitude', 'longitude')
+    response = render_to_kml('trees.kml', {'trees': trees})
+    response['Content-Disposition'] = 'attachment; filename="arbor.kml"'
+    return response
